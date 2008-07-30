@@ -1,7 +1,7 @@
 %define	name	perl-Cstools
 %define	real_name Cstools
 %define	version	3.42
-%define	release	%mkrel 9
+%define	release	%mkrel 11
 
 %define	summary	Tools for dealing with Czech and Slovak texts in Perl
 
