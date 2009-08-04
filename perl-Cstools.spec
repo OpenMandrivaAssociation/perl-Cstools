@@ -1,29 +1,25 @@
-%define	name	perl-Cstools
-%define	real_name Cstools
-%define	version	3.42
-%define	release	%mkrel 11
+%define	upstream_name    Cstools
+%define	upstream_version 3.42
 
-%define	summary	Tools for dealing with Czech and Slovak texts in Perl
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
 
-Summary:        %summary
-Name:           %name
-Version:        %version
-Release:        %release
-License:        GPL
-Group:          Development/Perl
-URL:            http://www.fi.muni.cz/~adelton/perl/
-Source0:        %real_name-%version.tar.bz2
-BuildRoot:      %_tmppath/%name-buildroot
-Buildrequires:	perl-devel
-Requires:       perl
+Summary:    Tools for dealing with Czech and Slovak texts in Perl
+License:    GPL
+Group:      Development/Perl
+Url:        http://www.fi.muni.cz/~adelton/perl/
+Source0:    %{upstream_name}-%{upstream_version}.tar.bz2
+
 BuildArch:	noarch
+BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 This package includes modules that are useful when dealing with Czech (and
 Slovak) texts in Perl.
 
 %prep
-%setup -q -n %{real_name}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -44,4 +40,3 @@ make test
 %dir %{perl_vendorlib}/Cz
 %{perl_vendorlib}/Cz/*
 %{_mandir}/*/*
-
