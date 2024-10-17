@@ -8,7 +8,7 @@ Release:	5
 Summary:	Tools for dealing with Czech and Slovak texts in Perl
 License:	GPL
 Group:		Development/Perl
-Url:		http://www.fi.muni.cz/~adelton/perl/
+Url:		https://www.fi.muni.cz/~adelton/perl/
 Source0:	%{upstream_name}-%{upstream_version}.tar.bz2
 
 BuildRequires:	perl-devel
