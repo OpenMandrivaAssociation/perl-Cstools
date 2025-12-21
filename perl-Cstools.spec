@@ -11,6 +11,7 @@ Group:		Development/Perl
 Url:		https://www.fi.muni.cz/~adelton/perl/
 Source0:	%{upstream_name}-%{upstream_version}.tar.bz2
 
+BuildRequires:	make
 BuildRequires:	perl-devel
 BuildArch:	noarch
 
