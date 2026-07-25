@@ -1,15 +1,15 @@
 %define	upstream_name    Cstools
-%define	upstream_version 3.42
+%define	upstream_version 3.44
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	5
+Version:	%{upstream_version}
+Release:	1
 
 Summary:	Tools for dealing with Czech and Slovak texts in Perl
 License:	GPL
 Group:		Development/Perl
 Url:		https://www.fi.muni.cz/~adelton/perl/
-Source0:	%{upstream_name}-%{upstream_version}.tar.bz2
+Source0:	https://cpan.metacpan.org/authors/id/J/JA/JANPAZ/Cstools-%{upstream_version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
