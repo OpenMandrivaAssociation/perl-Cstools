@@ -1,15 +1,13 @@
 %define	upstream_name    Cstools
-%define	upstream_version 3.44
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	1
+Version:	3.44
+Release:	2
 
 Summary:	Tools for dealing with Czech and Slovak texts in Perl
 License:	GPL
 Group:		Development/Perl
 Url:		https://www.fi.muni.cz/~adelton/perl/
-Source0:	https://cpan.metacpan.org/authors/id/J/JA/JANPAZ/Cstools-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/J/JA/JANPAZ/Cstools-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -20,7 +18,7 @@ This package includes modules that are useful when dealing with Czech (and
 Slovak) texts in Perl.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
@@ -45,9 +43,7 @@ make test
 
 * Tue Aug 04 2009 JÃ©rÃ´me Quelin <jquelin@mandriva.org> 3.420.0-1mdv2011.0
 + Revision: 409039
-- rebuild using %%perl_convert_version
-
-* Wed Jul 30 2008 Thierry Vignaud <tv@mandriva.org> 3.42-11mdv2009.0
+- rebuild using %3.44 Wed Jul 30 2008 Thierry Vignaud <tv@mandriva.org> 3.42-11mdv2009.0
 + Revision: 256397
 - rebuild
 
