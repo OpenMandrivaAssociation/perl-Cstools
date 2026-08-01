@@ -2,7 +2,7 @@
 %define upstream_version 3.44
 Name:		perl-%{upstream_name}
 Version:	3.44
-Release:	2
+Release:	3
 
 Summary:	Tools for dealing with Czech and Slovak texts in Perl
 License:	GPL
@@ -28,6 +28,9 @@ make test || :
 
 %install
 %makeinstall_std
+
+%check
+make test || :
 
 %files
 %doc README
