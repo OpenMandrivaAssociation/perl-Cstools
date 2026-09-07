@@ -2,7 +2,7 @@
 %define upstream_version 3.44
 Name:		perl-%{upstream_name}
 Version:	3.44
-Release:	3
+Release:	4
 
 Summary:	Tools for dealing with Czech and Slovak texts in Perl
 License:	GPL
@@ -32,6 +32,8 @@ make test || :
 %check
 make test || :
 
+find %{buildroot} -type f -name '*.pm' -exec chmod -x {} +
+if [ -d %{buildroot}%{_bindir} ]; then find %{buildroot}%{_bindir} -type f -exec chmod 755 {} +; fi
 %files
 %doc README
 %{_bindir}/*
